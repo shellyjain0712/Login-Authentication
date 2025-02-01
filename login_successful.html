@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .details {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+
+            document.getElementById('fullName').innerText = params.get('fullName');
+            document.getElementById('username').innerText = params.get('username');
+            document.getElementById('email').innerText = params.get('email');
+            document.getElementById('phone').innerText = params.get('phone');
+            document.getElementById('gender').innerText = params.get('gender');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Welcome!</div>
+        <div class="details"><strong>Full Name:</strong> <span id="fullName"></span></div>
+        <div class="details"><strong>Username:</strong> <span id="username"></span></div>
+        <div class="details"><strong>Email:</strong> <span id="email"></span></div>
+        <div class="details"><strong>Phone:</strong> <span id="phone"></span></div>
+        <div class="details"><strong>Gender:</strong> <span id="gender"></span></div>
+    </div>
+</body>
+</html>
